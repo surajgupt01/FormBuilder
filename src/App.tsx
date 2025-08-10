@@ -3,6 +3,7 @@ import Make from './Create'
 
 import Previews from './Previews'
 import { useState } from 'react';
+import MyForms from './MyForms';
 function App() {
 
 interface Field {
@@ -25,6 +26,7 @@ const [data , setData] = useState<Field[]>([])
        <Routes>
         <Route path='/' element={<Make setData = {setData} data = {data} setTilte={setTilte} Title={Title}/>}></Route>
         <Route path='/preview' element={<Previews field={data} Title={Title}/>}></Route>
+        <Route path='/myforms' element={<MyForms/>}></Route>
        </Routes>
        </BrowserRouter>
         

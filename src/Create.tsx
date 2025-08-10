@@ -46,6 +46,14 @@ interface Field {
   }
 
 
+  interface Forms{
+
+    Title : string
+    forms : Field[]
+
+  }
+
+
 
 
   function createSection(details : any){
@@ -222,7 +230,23 @@ interface Field {
            
              </div>
 
-            <div className=' w-10  hover:cursor-pointer group flex flex-col justify-center items-center'>  
+            <div className=' w-10  hover:cursor-pointer group flex flex-col justify-center items-center' onClick={()=>{
+              
+                  const formData: Forms = { Title: Title, forms: data };
+
+
+    const savedForms = localStorage.getItem("forms-data");
+    let formDataArray: Forms[] = savedForms ? JSON.parse(savedForms) : [];
+
+  
+    formDataArray.push(formData);
+
+    // Store updated array
+    localStorage.setItem("forms-data", JSON.stringify(formDataArray));
+
+    alert("Form saved");
+  }}
+            >  
             
             <Save/>
             <div className='border-1 border-gray-300 rounded-sm p-1 text-xs text-gray-900 group-hover:opacity-100 opacity-0 -translate-y-5 group-hover:translate-y-0 ease-in-out duration-300'>Save</div>

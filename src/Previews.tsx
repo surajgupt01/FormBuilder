@@ -25,8 +25,8 @@ function handleChange(e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<
 
 
   return (
-    <div className="w-full h-full flex justify-center ">
-    <div className="w-[60%] top-20 mx-auto shadow-sm shadow-gray-500 rounded-md bg-white backdrop-blur-2xl border-gray-400 border-1 absolute z-100 p-6">
+    <div className="w-full h-full flex justify-center  ">
+    <div className="w-[70%] mt-8 mb-8  top-20 mx-auto shadow-sm shadow-gray-500 rounded-md bg-white backdrop-blur-2xl border-gray-400 border-1  z-100 p-6 flex flex-col items-center">
                      <div className='bg-neutral-900 w-full rounded-md h-40 mt-4 mb-4 flex justify-between items-end p-4'>
                        <input placeholder='Form Title' className='border-b-1 border-gray-300 text-2xl font-semibold text-gray-400 outline-0' disabled  value={Title}></input>
                        <span className='font-semibold text-gray-400 text-xs flex items-center '>Created by Form-Builder <Logo/></span>
@@ -34,7 +34,7 @@ function handleChange(e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<
       {field.map((field: any, fieldIdx: number) => (
         <div
           key={field.id}
-          className="border-1 border-gray-300 rounded-md bg-gray-100 p-2 my-2 "
+          className="border-1 w-full border-gray-300 rounded-md bg-gray-100 p-2 my-2 "
         >
           {fieldIdx + 1 + ". "}
           <label htmlFor="">{field.label}</label>
@@ -92,7 +92,9 @@ function handleChange(e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<
           </div>
         </div>
       ))}
+      <button className="bg-black p-2 cursor-pointer text-white font-semibold text-shadow-2xs text-shadow-gray-200 w-40 rounded-sm mt-6">Submit</button>
     </div>
+     
     </div>
   );
 }
