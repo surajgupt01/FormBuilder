@@ -23,7 +23,7 @@ const [data , setData] = useState<Field[]>([])
 
        <BrowserRouter>
        <Routes>
-        <Route path='/create' element={<Make setData = {setData} data = {data} setTilte={setTilte} Title={Title}/>}></Route>
+        <Route path='/' element={<Make setData = {setData} data = {data} setTilte={setTilte} Title={Title}/>}></Route>
         <Route path='/preview' element={<Previews field={data} Title={Title}/>}></Route>
        </Routes>
        </BrowserRouter>
