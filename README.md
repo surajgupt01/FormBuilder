@@ -34,4 +34,33 @@ Create.tsx # form create page
 main.tsx # React DOM render
 App.css # Tailwind base styles
 ```
+## Instalation
+
+```bash
+
+cd FormBuilder  ## open the man directory
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+---
+
+```
+
+## 📬 Contact
+
+If you have any questions, suggestions, or feedback, feel free to reach out:
+
+- **Name:** Suraj Gupta  
+- **Email:** [surajgupt880@gmail.com] 
+- **GitHub:** [surajgupt01](https://github.com/surajgupt01)  
+- **LinkedIn:** [suraj-gupta](https://www.linkedin.com/in/suraj-gupta-1894051ba/)  
+
+---
+
+
+
 
