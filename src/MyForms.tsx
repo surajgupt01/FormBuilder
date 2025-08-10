@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Preview from "./svgs/Preview"
 import Previews from "./Previews"
 
 export default function MyForms(){
