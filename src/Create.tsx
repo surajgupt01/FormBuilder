@@ -120,6 +120,11 @@ interface Field {
                   </div>
                   <div className='cursor-pointer hover:bg-gray-300 w-30 p-1 rounded-sm mt-2 ' onClick={()=>chooseField('date')}>Date</div>
                 </div>
+
+
+
+                <div className='border-1 w-30 mt-85 font-semibold border-gray-600 bg-gray-700 rounded-lg p-2 flex justify-center items-center text-white scale-80 hover:bg-gray-800 cursor-pointer mt- text-sm ' onClick={()=>navigate('/myforms')}>My-Forms</div>
+
               </div>
             
             
@@ -253,13 +258,14 @@ interface Field {
            
              </div>
 
+
               {/* <div className='bg-blue-500 text-white font-semibold p-2 rounded-full text-sm w-8 h-8 flex justify-center items-center ml-15'><span className=''>S</span></div> */}
 
 
              </div>
 
 
-
+            
      
 
           </div>
