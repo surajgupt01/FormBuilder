@@ -5,6 +5,8 @@ Easily create, preview, and manage dynamic forms with different field types and 
 
 ---
 
+[Watch Demo](https://github.com/user-attachments/assets/3c24ca6f-3a44-4062-ae4b-1184a9302c66)
+
 ## 🚀 Features
 
 - ✏️ Add, edit, and delete form fields
