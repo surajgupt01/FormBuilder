@@ -19,3 +19,10 @@
   background-color: #000; /* Even darker on hover */
   cursor : 'pointer'
 }
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}

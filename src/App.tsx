@@ -20,8 +20,8 @@ const [data , setData] = useState<Field[]>([])
 
 
   return (
-    <>
-
+    <div className='h-full w-full'>
+      
        <BrowserRouter>
        <Routes>
         <Route path='/' element={<Make setData = {setData} data = {data} setTilte={setTilte} Title={Title}/>}></Route>
@@ -30,7 +30,7 @@ const [data , setData] = useState<Field[]>([])
        </Routes>
        </BrowserRouter>
         
-    </>
+    </div>
   )
 }
 

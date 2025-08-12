@@ -25,8 +25,8 @@ function handleChange(e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<
 
 
   return (
-    <div className="w-full h-full flex justify-center  ">
-    <div className="w-[70%] mt-8 mb-8  top-20 mx-auto shadow-sm shadow-gray-500 rounded-md bg-white backdrop-blur-2xl border-gray-400 border-1  z-100 p-6 flex flex-col items-center">
+    <div className="w-full h-auto flex justify-cente ">
+    <div className="w-[70%] h-auto  mt-8 mb-8  top-20 mx-auto shadow-sm shadow-gray-500 rounded-md bg-white backdrop-blur-2xl border-gray-400 border-1  z-100 p-4 flex flex-col items-center">
                      <div className='bg-neutral-900 w-full rounded-md h-40 mt-4 mb-4 flex justify-between items-end p-4'>
                        <input placeholder='Form Title' className='border-b-1 border-gray-300 text-2xl font-semibold text-gray-400 outline-0' disabled  value={Title}></input>
                        <span className='font-semibold text-gray-400 text-xs flex items-center '>Created by Form-Builder <Logo/></span>
@@ -34,12 +34,12 @@ function handleChange(e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<
       {field.map((field: any, fieldIdx: number) => (
         <div
           key={field.id}
-          className="border-1 w-full border-gray-300 rounded-md bg-gray-100 p-2 my-2 "
+          className="border-1 w-full border-gray-300 rounded-md bg-gray-100 p-2 my-2  "
         >
           {fieldIdx + 1 + ". "}
           <label htmlFor="">{field.label}</label>
 
-          <div>
+          <div className="h-auto">
             {field.options.map((opt: any, idx: number) => (
               <div key={idx} className="">
                 {Object.entries(opt).map(([key, value]: any) => (
@@ -57,7 +57,7 @@ function handleChange(e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<
                     {(key == "text" || key == "number" || key == "email") && (
                       <input
                         placeholder={value}
-                        type="text"
+                        type={key}
                         className="w-100 border-b-1 border-gray-500 h-10 p-1  outline-0 "
                         onChange={(e) => handleChange(e, field.label)}
                       ></input>

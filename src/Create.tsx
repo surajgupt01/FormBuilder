@@ -157,7 +157,7 @@ interface Field {
           {Object.entries(opt).map(([key, value]:any) => (
             <div key={key} className='flex items-center gap-x-2  p-1'>
               {(key == 'checkbox' || key =='radio') && <input  id={field.label + fieldIdx + value}  type={key} name={field.label+fieldIdx} value={value} className='ml-2 ' onChange={(e)=>handleChange(e , field.label)}></input>}
-              {(key == 'text' || key == 'number' || key == 'email') && <input placeholder={value} type='text' className='w-100 border-b-1 border-gray-500 h-10 p-1  outline-0 'onChange={(e)=>handleChange(e , field.label)}></input> }
+              {(key == 'text' || key == 'number' || key == 'email') && <input placeholder={value} type={key} className='w-100 border-b-1 border-gray-500 h-10 p-1  outline-0 'onChange={(e)=>handleChange(e , field.label)}></input> }
               {(key == 'date' ) && <input placeholder={value} type='date' className='w-100 border-b-1 border-gray-500 h-10 p-1  outline-0 'onChange={(e)=>handleChange(e,field.label)}></input> }
               {(key == 'textarea') && <textarea placeholder={value} className='w-90 h-40 p-1 rounded-md resize-none border-1 border-gray-500 outline-0'onChange={(e)=>handleChange(e , field.label)}></textarea> }
               {(key=='checkbox' || key == 'radio') &&<label htmlFor={field.label+fieldIdx+value} className='text-gray-600 text-sm cursor-pointer '>{value}</label>}
@@ -235,9 +235,18 @@ interface Field {
            
              </div>
 
-            <div className=' w-10  hover:cursor-pointer group flex flex-col justify-center items-center' onClick={()=>{
+            <div className=' w-10  hover:cursor-pointer group flex flex-col justify-center items-center' 
+            onClick={()=>{
               
                   const formData: Forms = { Title: Title, forms: data };
+
+                  if(formData) {
+                    alert('your form is empty !! ') 
+                    return
+
+                  }
+
+                  console.log(formData)
 
 
     const savedForms = localStorage.getItem("forms-data");
