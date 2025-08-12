@@ -1,4 +1,4 @@
-import { useEffect, useState  } from 'react'
+import React, { useEffect, useState  } from 'react'
 import { nanoid } from "nanoid";
 import { useNavigate } from 'react-router-dom';
 import './App.css'
@@ -10,7 +10,27 @@ import Preview from './svgs/Preview';
 import Save from './svgs/Save';
 
 
-export default function Make({setData , data , setTilte , Title} : any) {
+interface Field {
+  id: string;
+  type: string;
+  label:string
+  placeholder?: string;
+  options?: object[]; // only for select
+}
+
+
+
+interface createType{
+
+  setData : React.Dispatch<React.SetStateAction<Field[]>>;
+  data : Field[];
+  Title : string;
+  setTitle : React.Dispatch<React.SetStateAction<string>>
+
+}
+
+
+export default function Make({setData , data , setTitle , Title} : createType) {
 
 
 
@@ -141,7 +161,7 @@ interface Field {
              <form className='flex flex-col w-full h-auto mt-30 border-1 border-gray-300 p-4 rounded-sm' > 
              
               <div className='bg-neutral-900 w-full rounded-md h-40 mt-4 mb-4 flex justify-between items-end p-4'>
-                <input placeholder='Form Title' className='border-b-1 border-gray-300 text-2xl font-semibold text-gray-400 outline-0' value={Title}  onChange={(e:any)=>setTilte(e.currentTarget.value)}></input>
+                <input placeholder='Form Title' className='border-b-1 border-gray-300 text-2xl font-semibold text-gray-400 outline-0' value={Title}  onChange={(e:any)=>setTitle(e.currentTarget.value)}></input>
                 <span className='font-semibold text-gray-400 text-xs flex items-center '>Created by Form-Builder <Logo/></span>
               </div>
               {data.length==0 && <div className='text-3xl text-gray-400 mx-auto  flex mt-20 flex-col items-center'>Create you form <br></br> <FormLogo/></div>}
@@ -243,11 +263,13 @@ interface Field {
               
                   const formData: Forms = { Title: Title, forms: data };
 
-                  if(formData) {
+                  if(Title=='' || data.length == 0) {
                     alert('your form is empty !! ') 
                     return
 
                   }
+
+                  console.log(formData)
 
                   console.log(formData)
 
