@@ -215,7 +215,10 @@ interface Field {
                   options : input
 
                  }
-                 console.log(temp)
+                  if(!input || !statement) {
+                    alert('invalid sections requested !')
+                    return;
+                  }
                  createSection(temp)
 
               }}>submit</button>
