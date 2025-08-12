@@ -218,6 +218,7 @@ interface Field {
                   ></input>
                   <div className='cursor-pointer scale-80 hover:text-gray-700' onClick={()=>{
                     setChoose(choose.filter((_,idx)=>idx!=index))
+                    setInput(input.filter((_,idx)=>idx!=index))
                   }}><Close/></div>
                  
                 </div>
